@@ -11,6 +11,8 @@ $(function () {
   
     if (blockHour < currentHour) {
       $(this).addClass('past').removeClass('present future');
+    } else if (blockHour === 24) {
+      $(this).addClass('past').removeClass('present future');
     } else if (blockHour === currentHour) {
       $(this).addClass('present').removeClass('past future');
     } else {
@@ -18,7 +20,7 @@ $(function () {
     }
   });
 
-  
+
   $('.time-block').each(function() { 
     var hourId = $(this).attr('id');
     var savedInput = localStorage.getItem(hourId);
