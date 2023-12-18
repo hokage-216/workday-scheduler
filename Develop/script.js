@@ -11,8 +11,6 @@ $(function () {
   
     if (blockHour < currentHour) {
       $(this).addClass('past').removeClass('present future');
-    } else if (blockHour === 24) {
-      $(this).addClass('past').removeClass('present future');
     } else if (blockHour === currentHour) {
       $(this).addClass('present').removeClass('past future');
     } else {
